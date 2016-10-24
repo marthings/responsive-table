@@ -1,0 +1,25 @@
+{
+  "name": "mbrase",
+  "version": "1.0.0",
+  "description": "Frontend Twig/Gulp Boilerplate",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Berggren",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.10.0",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-foreach": "^0.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-twig": "olets/gulp-twig.git#update-dependencies",
+    "gulp-uglify": "^1.5.1"
+  }
+}

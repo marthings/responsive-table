@@ -1,0 +1,118 @@
+@import "normalize";
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+table {
+  margin-bottom: 30px;
+}
+
+.table-responsive {
+  overflow-x: scroll;
+}
+
+.table-responsive--horizontal {
+  vertical-align: top;
+  max-width: 100%;
+  width: 100%;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-responsive--horizontal,
+.table-responsive--horizontal--flip tbody {
+  -webkit-overflow-scrolling: touch;
+
+  // scrolling shadows
+  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+// change these gradients from white to your background colour if it differs
+// gradient on the first cells to hide the left shadow
+.table-responsive--horizontal td:first-child,
+.table-responsive--horizontal--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+// gradient on the last cells to hide the right shadow
+.table-responsive--horizontal td:last-child,
+.table-responsive--horizontal--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+
+.table-responsive--horizontal th {
+  text-align: left;
+  text-transform: uppercase;
+  background: #d6d6d6;
+}
+
+.table-responsive--horizontal th,
+.table-responsive--horizontal td {
+  padding: 6px 12px;
+  border: 1px solid #d6d6d6;
+}
+
+.table-responsive--horizontal--flip {
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+.table-responsive--horizontal--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.table-responsive--horizontal--flip th {
+  max-width: 120px;
+  overflow: hidden;
+  font-size: 80%;
+  flex: 1;
+  text-overflow: ellipsis;
+}
+
+.table-responsive--horizontal--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table-responsive--horizontal--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.table-responsive--horizontal--flip td,
+.table-responsive--horizontal--flip th {
+  display: block;
+}
+
+.table-responsive--horizontal--flip td {
+  background-image: none !important;
+  border-left: 0;
+}
+
+// border-collapse is no longer active
+.table-responsive--horizontal--flip th:not(:last-child),
+.table-responsive--horizontal--flip td:not(:last-child) {
+  border-bottom: 0;
+}
